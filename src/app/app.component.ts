@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Car} from "../model/Car";
 import {NgForOf, NgIf} from "@angular/common";
+import {CarListComponent} from "./car-list/car-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf],
+  imports: [RouterOutlet, NgForOf, NgIf, CarListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -21,5 +22,7 @@ export class AppComponent {
   car6 : Car ={Name : "Dodge", Model : "Charger" , Color : "Yellow", Make:"USA", Year: 2020, isAdmin : false};
 
   carList: Car[]=[this.car1,this.car2,this.car3,this.car4,this.car5,this.car6]
+  // Car: string;
+  car: any;
 
 }

@@ -1,13 +1,21 @@
-<div class="container">
-<h2>Car List</h2>
-<div *ngFor="let user of carList" class="user-card">
-  <h3>{{ user.Name }} {{ user.Model }}</h3>
-  <p>Year: {{ user.Year}}</p>
-  <p>Make: {{ user.Make }}</p>
-  <p>Color: {{user.Color}}</p>
-  <p *ngIf="user.isAdmin==true">Admin: 'Yes'</p>
-  <p *ngIf="user.isAdmin!=true">Admin: 'No'</p>
+<!DOCTYPE HTML>
+<html>
+<body>
+<div class="list">
+  <app-car-list></app-car-list>
 
-  <!-- ternary operator to give user appropriate feedback -->
+  <div *ngFor="let Car of carList"></div>
+  <div>
+    {{car.Name}}
+    {{car.Model}}
+    {{car.Year}}
+    {{car.Make}}
+    {{car.Colour}}
+    {{car.isAdmin}}
+
+  </div>
+  <div *ngIf="car.isAdmin == true">Yes</div>
+  <div *ngIf="car.isAdmin == false">No</div>
 </div>
-</div>
+</body>
+</html>

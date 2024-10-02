@@ -1,1 +1,5 @@
-<p>car-list works!</p>
+<div class="Rajd">
+  <app-car-list-item *ngFor="let Car of carList; let i = index"
+                     [Car]="Car"
+                     [ngClass]="{'orange-background': i %2 !==0,'silver-background':i %2 === 0}"></app-car-list-item>
+</div>
