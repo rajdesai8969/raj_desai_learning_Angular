@@ -1,21 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<div class="list">
+<div class="first">
   <app-car-list></app-car-list>
 
-  <div *ngFor="let Car of carList"></div>
+  <div *ngFor="let car of carList">
   <div>
     {{car.Name}}
     {{car.Model}}
     {{car.Year}}
     {{car.Make}}
-    {{car.Colour}}
+    {{car.Color}}
     {{car.isAdmin}}
 
   </div>
   <div *ngIf="car.isAdmin == true">Yes</div>
   <div *ngIf="car.isAdmin == false">No</div>
+</div>
 </div>
 </body>
 </html>
