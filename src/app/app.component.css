@@ -1,12 +1,12 @@
 :host {
   display: block;
   padding: 20px;
-  background-color: black;
+  background-color: white;
 }
 
 h2 {
   text-align: center;
-  color: whitesmoke;
+  color: black;
   font-size: 26px;
   margin-bottom: 20px;
 }

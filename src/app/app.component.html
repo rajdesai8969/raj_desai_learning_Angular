@@ -1,22 +1,9 @@
-<!DOCTYPE HTML>
-<html>
-<body>
+<div class="navbar">
+  <nav>
+    <a routerLink="/CarListComponent" routerLinkActive="active">Car List</a>
+    <a routerLink="/modify-list-item" routerLinkActive="active">Modify List</a>
+  </nav>
+</div>
 <div class="first">
-  <app-car-list></app-car-list>
-
-  <div *ngFor="let car of carList">
-  <div>
-    {{car.Name}}
-    {{car.Model}}
-    {{car.Year}}
-    {{car.Make}}
-    {{car.Color}}
-    {{car.isAdmin}}
-
-  </div>
-  <div *ngIf="car.isAdmin == true">Yes</div>
-  <div *ngIf="car.isAdmin == false">No</div>
+  <router-outlet></router-outlet>
 </div>
-</div>
-</body>
-</html>

@@ -1,8 +1,10 @@
 export interface Car{
-  Name : String;
-  Model : String;
-  Year : Number;
-  Make : String;
-  Color : String;
+  Name : string;
+  Model : string;
+  Year : number;
+  Make : string;
+  Color : string;
   isAdmin : boolean;
+  images : string;
+
 }

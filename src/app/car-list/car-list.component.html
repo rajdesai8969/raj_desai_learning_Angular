@@ -1,6 +1,28 @@
-<div class="Rajd">
-  <app-car-list-item *ngFor="let Car of carList; let i = index"
-                     [Car]="Car"
-                     [ngClass]="{'orange-background': i %2 !==0,'silver-background':i %2 === 0}"></app-car-list-item>
+<div class="first">
+  <h2>Car List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Color</th>
+      <th>isAdmin</th>
+      <th>images</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let carList of carList;">
+      <td>{{carList.Name}}</td>
+      <td>{{carList.Model}}</td>
+      <td>{{carList.Year}}</td>
+      <td>{{carList.Make}}</td>
+      <td>{{carList.Color}}</td>
+      <td>{{carList.isAdmin?'Yes':'No'}}</td>
+      <td><img [src]="carList.images"></td>
+    </tr>
+    </tbody>
+  </table>
+  <app-car-list-item></app-car-list-item>
 </div>
-
