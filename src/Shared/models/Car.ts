@@ -6,6 +6,5 @@ export interface Car{
   Make : string;
   Color : string;
   isAdmin : boolean;
-  images? : string;
-
+  images? : string
 }
