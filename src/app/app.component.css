@@ -36,9 +36,9 @@ p {
   margin: 5px 0;
 }
 
-p *ngIf {
-  font-weight: bold;
-}
+/*p *ngIf {*/
+/*  font-weight: bold;*/
+/*}*/
 p:last-child {
   color: #333;
   font-weight: bold;
