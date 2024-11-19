@@ -1,4 +1,4 @@
-import {Car} from "./models/Car";
+import {Car} from "../models/Car";
 
 export const carList: Car[]=[
   {Name: "BMW", Model: "X5", Year: 2023,Make: "German" ,Color: "Black",isAdmin: true, images:"/assets/bmw-x5.jpg"},
