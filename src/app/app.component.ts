@@ -11,8 +11,6 @@ import { CarListItemComponent } from './car-list-item/car-list-item.component';
     RouterOutlet,
     NgForOf,
     NgIf,
-    CarListComponent,
-    CarListItemComponent,
     RouterLink,
     RouterLinkActive,
   ],
