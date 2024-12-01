@@ -9,9 +9,15 @@ import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.c
 const routes: Routes = [
   {path:'', redirectTo: '/CarListComponent', pathMatch: 'full'},
   { path: 'CarListComponent', component: CarListComponent },
-  { path: 'CarListComponent/:Name', component: CarListItemComponent },
-  {path:'modify-student', component: ModifyListItemComponent},
-  {path: '**', component:PageNotFoundComponent}
+  { path: 'CarListComponent/:Name',
+    loadComponent: () =>
+          import('./app/car-list-item/car-list-item.component').then(m => m.CarListItemComponent)},
+  {path:'modify-student',
+    loadComponent: () =>
+          import('./app/modify-list-item/modify-list-item.component').then(m => m.ModifyListItemComponent)},
+  {path: '**',
+    loadComponent: () =>
+          import('./app/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)}
   ];
 
 bootstrapApplication(AppComponent,{providers:[provideRouter(routes)]})
