@@ -9,17 +9,19 @@
       <th>Year</th>
       <th>Make</th>
       <th>Color</th>
+      <th>Price</th>
       <th>isAdmin</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let carList of carList" [routerLink]="['/CarListComponent',carList.id]">
       <td>{{carList.id}}</td>
-      <td>{{carList.Name}}</td>
+      <td>{{carList.Name | titlecase}}</td>
       <td>{{carList.Model}}</td>
       <td>{{carList.Year}}</td>
       <td>{{carList.Make}}</td>
-      <td>{{carList.Color}}</td>
+      <td>{{carList.Color | lowercase}}</td>
+      <td>{{carList.Price | number:'1.2-2'}}</td>
       <td>{{carList.isAdmin?'Yes':'No'}}</td>
     </tr>
     </tbody>

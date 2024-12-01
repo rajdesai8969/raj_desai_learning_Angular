@@ -5,6 +5,7 @@ export interface Car{
   Year : number,
   Make : string,
   Color : string,
+  Price : number,
   isAdmin : boolean,
   images : string
 

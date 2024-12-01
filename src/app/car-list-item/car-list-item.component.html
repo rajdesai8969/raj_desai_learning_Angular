@@ -6,6 +6,7 @@
   <p>Year : {{car.Year}}</p>
   <p>Make : {{car.Make}}</p>
   <p>Color: {{car.Color}}</p>
+  <p>Price : {{car.Price}}</p>
   <p>isAdmin: {{car.isAdmin}}</p>
   <button (click)="goBackward()" [disabled]="currentIndex=== 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex=== carList.length -1 ">Next</button>

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Car} from "../../Shared/models/Car";
 import {CarListItemComponent} from "../car-list-item/car-list-item.component";
-import {NgClass, NgForOf, NgIf} from "@angular/common";
+import {DecimalPipe, LowerCasePipe, NgClass, NgForOf, NgIf, TitleCasePipe} from "@angular/common";
 import {CarService} from "../service/car.service";
 import {Router, RouterLink} from "@angular/router";
 
@@ -11,7 +11,10 @@ import {Router, RouterLink} from "@angular/router";
   imports: [
     CarListItemComponent,
     NgForOf,
-    RouterLink
+    RouterLink,
+    TitleCasePipe,
+    LowerCasePipe,
+    DecimalPipe
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'
