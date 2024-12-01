@@ -10,7 +10,8 @@
   <p [appHoverHighlight]="'orange'">Color: {{car.Color | lowercase}}</p>
   <p [appHoverHighlight]="'orange'">Price : {{car.Price | number: '1.2-2'}}</p>
   <p [appHoverHighlight]="'orange'">isAdmin: {{car.isAdmin}}</p>
+
   <button (click)="goBackward()" [disabled]="currentIndex=== 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex=== carList.length -1 ">Next</button>
-  <button (click)="goBack()">Back to Student list</button>
+  <button (click)="goBack()">Back to Car list</button>
 </div>

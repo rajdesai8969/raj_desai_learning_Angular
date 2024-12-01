@@ -4,6 +4,7 @@ import {provideRouter, Routes} from "@angular/router";
 import {CarListComponent} from "./app/car-list/car-list.component";
 
 
+
 const routes: Routes = [
   {path:'', redirectTo: '/CarListComponent', pathMatch: 'full'},
   { path: 'CarListComponent', component: CarListComponent },

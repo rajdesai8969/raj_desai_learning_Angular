@@ -1,3 +1,4 @@
+// @ts-ignore
 import { HoverHiglightDirective } from './hover-higlight.directive';
 
 describe('HoverHiglightDirective', () => {

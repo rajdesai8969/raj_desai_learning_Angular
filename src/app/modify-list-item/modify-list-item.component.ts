@@ -32,10 +32,13 @@ export class ModifyListItemComponent implements OnInit{
     private router: Router
   ) {
     this.carForm = this.fb.group({
-      id: ['', Validators.required], //ID is required
-      firstName: ['', Validators.required],//First name is required
-      lastName: ['', Validators.required],
-      department: [''],
+      id: ['', Validators.required],
+      Name: ['', Validators.required],
+      Model: ['', Validators.required],
+      Year: [''],
+      Make:[''],
+      Color:[''],
+      Price:[''],
       isAdmin: [false]
     });
   }
@@ -59,25 +62,24 @@ export class ModifyListItemComponent implements OnInit{
     if (car.id) {
       this.carService.updateCar(car);
     } else {
-      // For adding a new student, generate a new ID
       const newId = this.carService.generateNewId();
       car.id = newId;
       this.carService.addCar(car);
     }
 
-    this.router.navigate(['/cars']);
+    this.router.navigate(['/CarListComponent']);
   }
 
   onDelete(): void {
     const id = this.carForm.get('id')?.value;
     if (id) {
       this.carService.deleteCar(id);
-      this.router.navigate(['/cars']);
+      this.router.navigate(['/CarListComponent']);
     }
   }
 
   navigateToCarList(): void {
-    this.router.navigate(['/cars']);
+    this.router.navigate(['/CarListComponent']);
   }
 
 }
