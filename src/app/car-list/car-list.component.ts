@@ -4,6 +4,7 @@ import {CarListItemComponent} from "../car-list-item/car-list-item.component";
 import {DecimalPipe, LowerCasePipe, NgClass, NgForOf, NgIf, TitleCasePipe} from "@angular/common";
 import {CarService} from "../service/car.service";
 import {Router, RouterLink} from "@angular/router";
+import {NameModelPipe} from "../pipe/name-model.pipe";
 
 @Component({
   selector: 'app-car-list',
@@ -14,7 +15,8 @@ import {Router, RouterLink} from "@angular/router";
     RouterLink,
     TitleCasePipe,
     LowerCasePipe,
-    DecimalPipe
+    DecimalPipe,
+    NameModelPipe
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'

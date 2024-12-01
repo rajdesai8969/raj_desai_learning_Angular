@@ -4,9 +4,9 @@
   <p>name: {{car.Name}}</p>
   <p>model: {{car.Model}}</p>
   <p>Year : {{car.Year}}</p>
-  <p>Make : {{car.Make}}</p>
-  <p>Color: {{car.Color}}</p>
-  <p>Price : {{car.Price}}</p>
+  <p>Make : {{car.Make | titlecase}}</p>
+  <p>Color: {{car.Color | lowercase}}</p>
+  <p>Price : {{car.Price | number: '1.2-2'}}</p>
   <p>isAdmin: {{car.isAdmin}}</p>
   <button (click)="goBackward()" [disabled]="currentIndex=== 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex=== carList.length -1 ">Next</button>

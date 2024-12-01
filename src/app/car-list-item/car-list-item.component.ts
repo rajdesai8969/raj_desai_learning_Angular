@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Car} from "../../Shared/models/Car";
-import {NgForOf, NgIf} from "@angular/common";
+import {DecimalPipe, LowerCasePipe, NgForOf, NgIf, TitleCasePipe} from "@angular/common";
 import {carList} from "../../Shared/data/mockUser";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CarService} from "../service/car.service";
@@ -10,7 +10,10 @@ import {CarService} from "../service/car.service";
   standalone: true,
   imports: [
     NgIf,
-    NgForOf
+    NgForOf,
+    DecimalPipe,
+    LowerCasePipe,
+    TitleCasePipe
   ],
   templateUrl: './car-list-item.component.html',
   styleUrl: './car-list-item.component.css'
