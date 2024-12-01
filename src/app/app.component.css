@@ -36,7 +36,7 @@ p {
   margin: 5px 0;
 }
 
-p *ngIf {
+p {
   font-weight: bold;
 }
 p:last-child {

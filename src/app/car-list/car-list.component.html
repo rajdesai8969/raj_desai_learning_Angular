@@ -3,26 +3,25 @@
   <table>
     <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Model</th>
       <th>Year</th>
       <th>Make</th>
       <th>Color</th>
       <th>isAdmin</th>
-      <th>images</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let carList of carList;">
+    <tr *ngFor="let carList of carList" [routerLink]="['/CarListComponent',carList.id]">
+      <td>{{carList.id}}</td>
       <td>{{carList.Name}}</td>
       <td>{{carList.Model}}</td>
       <td>{{carList.Year}}</td>
       <td>{{carList.Make}}</td>
       <td>{{carList.Color}}</td>
       <td>{{carList.isAdmin?'Yes':'No'}}</td>
-      <td><img [src]="carList.images"></td>
     </tr>
     </tbody>
   </table>
-  <app-car-list-item></app-car-list-item>
 </div>

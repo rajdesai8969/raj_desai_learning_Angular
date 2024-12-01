@@ -1,1 +1,51 @@
-<p>modify-list-item works!</p>
+
+<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+  <!-- ID Field -->
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" />
+  </div>
+
+  <!-- First Name Field -->
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" id="Name" formControlName="Name" />
+  </div>
+
+  <!-- Last Name Field -->
+  <div class="form-group">
+    <label for="Model">Model</label>
+    <input type="text" id="Model" formControlName="Model" />
+  </div>
+
+  <!-- Department Field -->
+  <div class="form-group">
+    <label for="Year">Year</label>
+    <input type="number" id="Year" formControlName="Year" />
+  </div>
+  <!-- make -->
+  <div class="form-group">
+    <label for="Make">Make</label>
+    <input type="number" id="Make" formControlName="Make" />
+  </div>
+
+  <!-- Department Field -->
+  <div class="form-group">
+    <label for="Color">Color</label>
+    <input type="number" id="Color" formControlName="Color" />
+  </div>
+  <!-- Is Admin Checkbox -->
+  <div class="form-group">
+    <label for="isAdmin">Is Admin</label>
+    <input type="checkbox" id="isAdmin" formControlName="isAdmin" />
+  </div>
+
+  <!-- Submit Button (Add or Update) -->
+  <button type="submit">Submit</button>
+
+  <!-- Delete Button (Always Displayed Now) -->
+  <button type="button" (click)="onDelete()">Delete</button>
+
+  <!-- Back Button -->
+  <button type="button" (click)="navigateToCarList()">Back to List</button>
+</form>
