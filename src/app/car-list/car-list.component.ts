@@ -5,6 +5,7 @@ import {DecimalPipe, LowerCasePipe, NgClass, NgForOf, NgIf, TitleCasePipe} from 
 import {CarService} from "../service/car.service";
 import {Router, RouterLink} from "@angular/router";
 import {NameModelPipe} from "../pipe/name-model.pipe";
+import {HoverHighlightDirective} from "../directives/hover-higlight.directive";
 
 @Component({
   selector: 'app-car-list',
@@ -16,7 +17,8 @@ import {NameModelPipe} from "../pipe/name-model.pipe";
     TitleCasePipe,
     LowerCasePipe,
     DecimalPipe,
-    NameModelPipe
+    NameModelPipe,
+    HoverHighlightDirective
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'

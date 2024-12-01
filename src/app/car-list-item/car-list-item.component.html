@@ -1,13 +1,15 @@
 <div *ngIf="car" class="name">
 
-  <h2>Cars {{car.id}}</h2>
-  <p>name: {{car.Name}}</p>
-  <p>model: {{car.Model}}</p>
-  <p>Year : {{car.Year}}</p>
-  <p>Make : {{car.Make | titlecase}}</p>
-  <p>Color: {{car.Color | lowercase}}</p>
-  <p>Price : {{car.Price | number: '1.2-2'}}</p>
-  <p>isAdmin: {{car.isAdmin}}</p>
+  <h2>Car Details</h2>
+
+  <p [appHoverHighlight]="'orange'">Cars {{car.id}}</p>
+  <p [appHoverHighlight]="'orange'">name: {{car.Name}}</p>
+  <p [appHoverHighlight]="'orange'">model: {{car.Model}}</p>
+  <p [appHoverHighlight]="'orange'">Year : {{car.Year}}</p>
+  <p [appHoverHighlight]="'orange'">Make : {{car.Make | titlecase}}</p>
+  <p [appHoverHighlight]="'orange'">Color: {{car.Color | lowercase}}</p>
+  <p [appHoverHighlight]="'orange'">Price : {{car.Price | number: '1.2-2'}}</p>
+  <p [appHoverHighlight]="'orange'">isAdmin: {{car.isAdmin}}</p>
   <button (click)="goBackward()" [disabled]="currentIndex=== 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex=== carList.length -1 ">Next</button>
   <button (click)="goBack()">Back to Student list</button>

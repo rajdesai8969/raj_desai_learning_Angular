@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {CarService} from "../service/car.service";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 
 @Component({
@@ -12,7 +13,8 @@ import {CarService} from "../service/car.service";
   imports: [
     FormsModule,
     NgIf,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightOnFocusDirective
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'
